@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>꼬끌리 플로리스트 학원</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffafc;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffb7ce;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #ffe3ec;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    footer {
+      background-color: #ffdee9;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+
+    h2 {
+      color: #c94f7c;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>꼬끌리 플로리스트 학원</h1>
+    <p>꽃처럼 피어나는 당신의 감성을 위한 공간</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('intro')">학원소개</a>
+    <a onclick="showSection('course')">수강내용</a>
+    <a onclick="showSection('teacher')">강사소개</a>
+    <a onclick="showSection('contact')">문의</a>
+  </nav>
+
+  <section id="intro" class="active">
+    <h2>학원 소개</h2>
+    <p>
+      꼬끌리 플로리스트 학원은 자연의 아름다움을 배우고 나누는 공간입니다.  
+      감성 플라워 디자인부터 자격증 취득까지,  
+      누구나 꽃과 함께하는 삶을 시작할 수 있습니다.
+    </p>
+  </section>
+
+  <section id="course">
+    <h2>수강 내용</h2>
+    <ul>
+      <li>🌷 취미반: 주 1회 꽃꽂이 클래스</li>
+      <li>🌼 자격증반: 플로리스트 국가자격증 대비</li>
+      <li>🌹 원데이 클래스: 특별한 날을 위한 꽃 수업</li>
+    </ul>
+  </section>
+
+  <section id="teacher">
+    <h2>강사 소개</h2>
+    <p><strong>최민주 원장</strong><br>
+      플로리스트 경력 10년, 다수 플라워샵 운영 경험<br>
+      "꽃을 통해 감성과 삶의 여유를 전달하고 싶습니다."</p>
+  </section>
+
+  <section id="contact">
+    <h2>문의하기</h2>
+    <p>📍 경기 수원시 팔달구 향교로47번길 2 한림빌딩 202호, 402호<br>
+       📞 0507-1377-9585<br>
+       📸 인스타그램: @about_coqueli</p>
+  </section>
+
+  <footer>
+    © 2025 꼬끌리 플로리스트 학원. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
