@@ -16,8 +16,19 @@
     header {
       background-color: #ffb7ce;
       color: white;
-      padding: 20px;
+      padding: 30px 20px 20px;
       text-align: center;
+      position: relative;
+    }
+
+    header img.logo {
+      max-width: 180px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: white;
     }
 
     nav {
@@ -69,6 +80,8 @@
 <body>
 
   <header>
+    <!-- 👇 배너 이미지 삽입 -->
+    <img src="images/logo.png" alt="Coqueli 로고" class="logo">
     <h1>꼬끌리 플로리스트 학원</h1>
     <p>꽃처럼 피어나는 당신의 감성을 위한 공간</p>
   </header>
